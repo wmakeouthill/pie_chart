@@ -1,0 +1,53 @@
+{
+  "privileges": [],
+    "dataRoles": [
+      {
+        "displayName": "Category",
+        "name": "category",
+        "kind": "Grouping"
+      },
+      {
+        "displayName": "Value",
+        "name": "value",
+        "kind": "Measure"
+      }
+    ],
+    "dataViewMappings": [
+      {
+        "categorical": {
+          "categories": {
+            "for": { "in": "category" }
+          },
+          "values": {
+            "select": [{ "bind": { "to": "value" } }]
+          }
+        }
+      }
+    ],
+    "objects": {
+        "legend": {
+            "displayName": "Legend",
+            "properties": {
+                "show": {
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "position": {
+                    "type": {
+                        "enumeration": [
+                            { "value": "Top", "displayName": "Top" },
+                            { "value": "Bottom", "displayName": "Bottom" },
+                            { "value": "Left", "displayName": "Left" },
+                            { "value": "Right", "displayName": "Right" }
+                        ]
+                    }
+                }
+                ,
+                  "fontSize": {
+                    "type": { "integer": true }
+                  }
+            }
+        }
+    }
+  }
